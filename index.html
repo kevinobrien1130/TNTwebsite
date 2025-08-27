@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TNT Computers - Consulting Services</title>
+  <title>TNT Computers - IT Consulting & Services</title>
   <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0e6ad53.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <!-- Header / Navbar -->
-  <header>
-    <div class="logo">TNT Computers</div>
+  <header id="navbar">
+    <h1>TNT Computers</h1>
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
     <nav>
       <ul id="nav-links">
         <li><a href="#hero">Home</a></li>
@@ -19,79 +19,86 @@
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <section id="hero">
-    <div class="hero-content">
-      <h1>Your Trusted IT Partner</h1>
-      <p>We provide expert computer consulting to keep your business running smoothly.</p>
-      <a href="#contact" class="btn">Get in Touch</a>
+    <div class="hero-fade">
+      <h1>Reliable IT Consulting for Your Business</h1>
+      <p>Technology solutions tailored to your needs.</p>
+      <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        Get Started
+      </button>
     </div>
   </section>
 
   <!-- Services Section -->
   <section id="services">
     <h2>Our Services</h2>
-    <div class="services-container">
-      <div class="service">
-        <i class="fas fa-laptop-code"></i>
-        <h3>IT Consulting</h3>
-        <p>Expert guidance to optimize your technology and streamline operations.</p>
-      </div>
-      <div class="service">
-        <i class="fas fa-network-wired"></i>
-        <h3>Network Setup</h3>
-        <p>Secure and reliable network solutions tailored to your business needs.</p>
-      </div>
-      <div class="service">
-        <i class="fas fa-shield-alt"></i>
-        <h3>Cybersecurity</h3>
-        <p>Protect your business with advanced security measures and monitoring.</p>
-      </div>
-      <div class="service">
-        <i class="fas fa-server"></i>
-        <h3>Managed Services</h3>
-        <p>Let us manage your day-to-day IT needs so you can focus on growing your business.</p>
-      </div>
+    <div class="service fade-in">
+      <i class="fas fa-laptop-code"></i>
+      <h3>Computer Repair</h3>
+      <p>Fast and reliable repair services for desktops and laptops.</p>
+    </div>
+    <div class="service fade-in">
+      <i class="fas fa-network-wired"></i>
+      <h3>Networking</h3>
+      <p>Setup and maintenance of secure and scalable networks.</p>
+    </div>
+    <div class="service fade-in">
+      <i class="fas fa-shield-alt"></i>
+      <h3>Cybersecurity</h3>
+      <p>Protect your business with advanced security solutions.</p>
+    </div>
+    <div class="service fade-in">
+      <i class="fas fa-cogs"></i>
+      <h3>Managed Services</h3>
+      <p>We handle your day-to-day IT needs so you can focus on growing your business.</p>
     </div>
   </section>
 
   <!-- Reviews Section -->
   <section id="reviews">
     <h2>What Our Clients Say</h2>
-    <div class="reviews-container">
-      <div class="review">
-        <p>"TNT Computers helped set up our secure network and we couldn’t be happier!"</p>
-        <h4>- Sarah L., Small Business Owner</h4>
-      </div>
-      <div class="review">
-        <p>"Their managed services keep our IT running flawlessly every day."</p>
-        <h4>- James P., Office Manager</h4>
-      </div>
-      <div class="review">
-        <p>"Professional, reliable, and always there when we need support."</p>
-        <h4>- Emily R., Non-Profit Director</h4>
-      </div>
+    <div class="review fade-in">
+      <i class="fas fa-user-circle"></i>
+      <p>"TNT Computers fixed my laptop within hours. Highly recommended!"</p>
+      <strong>- Sarah J. (Computer Repair)</strong>
+    </div>
+    <div class="review fade-in">
+      <i class="fas fa-user-circle"></i>
+      <p>"Our office network has never run smoother. Fantastic support team."</p>
+      <strong>- Michael T. (Networking)</strong>
+    </div>
+    <div class="review fade-in">
+      <i class="fas fa-user-circle"></i>
+      <p>"They set up security measures that give us peace of mind every day."</p>
+      <strong>- Linda P. (Cybersecurity)</strong>
+    </div>
+    <div class="review fade-in">
+      <i class="fas fa-user-circle"></i>
+      <p>"Thanks to TNT's managed services, I never worry about IT issues anymore."</p>
+      <strong>- David R. (Managed Services)</strong>
     </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Us</h2>
-    <form class="contact-form" onsubmit="sendMessage(event)">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="email" id="email" placeholder="Your Email" required>
-      <textarea id="message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <input type="submit" value="Send Message">
     </form>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 TNT Computers. All Rights Reserved.</p>
+    <p>&copy; 2025 TNT Computers | All Rights Reserved</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

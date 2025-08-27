@@ -1,76 +1,46 @@
-function toggleMenu() {
-  document.getElementById("nav-links").classList.toggle("showing");
-}
-
-function sendMessage(event) {
-  event.preventDefault();
-  const name = document.getElementById("name").value;
-  alert("Thank you, " + name + "! Your message has been sent successfully.");
-  document.querySelector(".contact-form").reset();
-}
-
-// Animate Services on scroll
-const services = document.querySelectorAll(".service");
-const serviceIcons = document.querySelectorAll(".service i");
-
-const servicesObserver = new IntersectionObserver((entries, obs) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      services.forEach((card, index) => {
-        setTimeout(() => {
-          card.classList.add("fade-in");
-          serviceIcons[index].classList.add("pulse-once");
-        }, index * 250);
-      });
-      obs.disconnect();
-    }
-  });
-}, { threshold: 0.4 });
-
-servicesObserver.observe(document.querySelector("#services"));
-
-// Animate Reviews on scroll
-const reviews = document.querySelectorAll(".review");
-
-const reviewsObserver = new IntersectionObserver((entries, obs) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      reviews.forEach((card, index) => {
-        setTimeout(() => {
-          card.classList.add("fade-in");
-        }, index * 250);
-      });
-      obs.disconnect();
-    }
-  });
-}, { threshold: 0.4 });
-
-reviewsObserver.observe(document.querySelector("#reviews"));
-
-// Animate Contact Form on scroll
-const contactForm = document.querySelector(".contact-form");
-
-const contactObserver = new IntersectionObserver((entries, obs) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      contactForm.classList.add("fade-in");
-      obs.disconnect();
-    }
-  });
-}, { threshold: 0.4 });
-
-contactObserver.observe(document.querySelector("#contact"));
-
-// Animate Hero + Navbar on page load
-window.addEventListener("load", () => {
-  // Navbar slide down
-  document.querySelector("header").classList.add("nav-fade");
-
-  // Hero fade in sequence
-  const heroElements = document.querySelectorAll(".hero-content > *");
-  heroElements.forEach((el, index) => {
-    setTimeout(() => {
-      el.classList.add("hero-fade");
-    }, (index + 1) * 300);
-  });
+// Handle Navbar Background on Scroll
+window.addEventListener("scroll", () => {
+  const navbar = document.getElementById("navbar");
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
 });
+
+// Toggle Mobile Menu
+function toggleMenu() {
+  const nav = document.getElementById("nav-links");
+  nav.classList.toggle("showing");
+}
+
+// Animate Elements on Scroll
+const faders = document.querySelectorAll(".fade-in");
+
+const appearOptions = {
+  threshold: 0.2,
+  rootMargin: "0px 0px -50px 0px"
+};
+
+const appearOnScroll = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add("appear");
+    observer.unobserve(entry.target);
+  });
+}, appearOptions);
+
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+});
+
+// Pulse Animation for Get Started Button
+const heroButton = document.querySelector("#hero button");
+if (heroButton) {
+  heroButton.addEventListener("mouseenter", () => {
+    heroButton.classList.add("pulse-once");
+  });
+  heroButton.addEventListener("animationend", () => {
+    heroButton.classList.remove("pulse-once");
+  });
+}

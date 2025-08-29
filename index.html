@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TNT Computers | IT Consulting & Computer Repair in Smithtown, Suffolk County & Long Island, NY</title>
-  <meta name="description" content="TNT Computers provides IT consulting, computer repair, managed IT services, and cybersecurity across Smithtown, Suffolk County, and Long Island, NY.">
+  <meta name="description" content="TNT Computers - Professional IT consulting, managed services, and tech support in Smithtown, Suffolk County, and Long Island, NY.">
+  <title>TNT Computers - IT Consulting & Services</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
 </head>
 <body>
   <!-- Navbar -->
@@ -25,63 +24,66 @@
 
   <!-- Hero Section -->
   <section id="home" class="hero">
-    <div class="hero-text">
-      <h1>Your Local IT Partner in Smithtown & Suffolk County</h1>
-      <p>Professional IT consulting, computer repair, and managed services for homes and businesses across Long Island, NY.</p>
-      <a href="#contact" class="btn">Get Support Now</a>
-    </div>
+    <h1>Welcome to TNT Computers</h1>
+    <p>Your trusted partner in IT consulting and computer services across Smithtown, Suffolk County, and Long Island.</p>
   </section>
 
   <!-- Services -->
-  <section id="services" class="content-section">
+  <section id="services" class="section">
     <h2>Our Services</h2>
-    <div class="services-grid">
-      <div class="service">
+    <div class="service-container">
+      <div class="service-box">
         <h3>Computer Repair</h3>
-        <p>Fast and reliable repairs for desktops, laptops, and custom PCs.</p>
+        <p>Quick and reliable computer repair services to get you back up and running.</p>
       </div>
-      <div class="service">
-        <h3>IT Consulting</h3>
-        <p>Expert technology advice to keep your business running smoothly.</p>
+      <div class="service-box">
+        <h3>Networking</h3>
+        <p>Secure and efficient networking solutions for homes and businesses.</p>
       </div>
-      <div class="service">
-        <h3>Cybersecurity</h3>
-        <p>Protect your business with advanced security solutions.</p>
-      </div>
-      <div class="service">
+      <div class="service-box">
         <h3>Managed Services</h3>
-        <p>We manage your day-to-day IT needs so you can focus on your business.</p>
+        <p>We manage your day-to-day IT needs so you can focus on growing your business without interruptions.</p>
+      </div>
+      <div class="service-box">
+        <h3>Data Recovery</h3>
+        <p>Recover your lost files with our professional data recovery services.</p>
       </div>
     </div>
   </section>
 
   <!-- Reviews -->
-  <section id="reviews" class="content-section alt-bg">
+  <section id="reviews" class="section">
     <h2>What Our Clients Say</h2>
-    <div class="reviews">
-      <blockquote>“TNT Computers fixed our office network in hours, saving us from major downtime!” – Smithtown Business Owner</blockquote>
-      <blockquote>“Super knowledgeable and friendly. They cleaned my laptop of viruses and it runs like new!” – Hauppauge Resident</blockquote>
-      <blockquote>“We use TNT’s managed IT services — it feels like we have a full IT department.” – Suffolk County Client</blockquote>
+    <div class="review">
+      <p>"TNT Computers fixed my laptop in no time. Amazing service!" – John D.</p>
+    </div>
+    <div class="review">
+      <p>"Our office network runs smoothly thanks to their managed IT services." – Sarah K.</p>
+    </div>
+    <div class="review">
+      <p>"Professional, reliable, and affordable. Highly recommended!" – Mike R.</p>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="content-section">
+  <section id="contact" class="section">
     <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:info@tntcomputers.com">info@tntcomputers.com</a></p>
-    <p>Phone: <a href="tel:+16315555555">(631) 555-5555</a></p>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
+    <p>Have questions or need help? Reach out to us today!</p>
+
+    <!-- Netlify Form -->
+    <form name="contact" method="POST" data-netlify="true">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
     </form>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 TNT Computers. Serving Smithtown, Suffolk County & Long Island, NY.</p>
-    <p><a href="service-areas.html" class="footer-link">See All Service Areas</a></p>
+    <p>&copy; 2025 TNT Computers | IT Consulting & Services in Smithtown, Suffolk County, and Long Island, NY</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

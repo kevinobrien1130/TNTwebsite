@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Area Page Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #f8f9fa;
+    }
+    h1 { color: #0056b3; }
+    textarea {
+      width: 100%;
+      height: 200px;
+      margin-bottom: 20px;
+      padding: 10px;
+      font-size: 14px;
+    }
+    button {
+      background: #0056b3;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      margin-right: 10px;
+      margin-bottom: 20px;
+    }
+    button:hover { background: #003d80; }
+    .output {
+      border: 1px solid #ddd;
+      background: #fff;
+      padding: 10px;
+      margin-top: 20px;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 10px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <h1>Service Area Page Generator</h1>
+  <p>Paste or edit the list of towns (one per line), then click a button to generate pages or download a ZIP.</p>
+  
+  <textarea id="towns"></textarea>
+  <br>
+  <button onclick="generatePages()">Preview Pages</button>
+  <button onclick="downloadZip()">Download ZIP (Town Pages Only)</button>
+  <button onclick="downloadZipWithHub()">Download ZIP + Hub Page</button>
+
+  <h2>Generated Files</h2>
+  <div id="output" class="output"></div>
+
+  <!-- JSZip + FileSaver -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+  <script>
+    const defaultTowns = [
+      "Smithtown","Hauppauge","Commack","Stony Brook","Kings Park","Nesconset","Lake Grove","Ronkonkoma","Holbrook","Centereach","Selden","Islandia","Bohemia","East Northport","Northport",
+      "Islip","West Islip","East Islip","Bay Shore","Brightwaters","Sayville","West Sayville","Oakdale","Great River",
+      "Patchogue","Port Jefferson","Port Jefferson Station","Shoreham","Rocky Point","Miller Place","Mount Sinai","Sound Beach","Wading River",
+      "Deer Park","Lindenhurst","Babylon","West Babylon","Huntington","Huntington Station","Greenlawn","Elwood","Dix Hills","Fort Salonga",
+      "Riverhead","Jamesport","Aquebogue","Flanders","Calverton",
+      "Brookhaven","Bellport","Mastic","Mastic Beach","Shirley","Center Moriches","East Moriches","Moriches",
+      "Southampton","Bridgehampton","Sag Harbor","Water Mill","Hampton Bays","Eastport","East Quogue","Quogue","Westhampton","Westhampton Beach",
+      "East Hampton","Amagansett","Springs","Wainscott","Montauk",
+      "Southold","Mattituck","Cutchogue","Greenport","Peconic","South Jamesport","Orient","Shelter Island"
+    ];
+
+    window.onload = function() {
+      document.getElementById("towns").value = defaultTowns.join("\n");
+    };
+
+    function getTowns() {
+      return document.getElementById("towns").value.split("\n").map(t => t.trim()).filter(Boolean);
+    }
+
+    function generateTemplate(town) {
+      return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computer Repair & IT Services in ${town}, NY | TNT Computers</title>
+  <meta name="description" content="TNT Computers provides IT consulting, computer repair, managed IT services, and cybersecurity for homes and businesses in ${town}, NY.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">TNT Computers</div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#services">Services</a></li>
+        <li><a href="../index.html#reviews">Reviews</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="../service-areas.html">Service Areas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero small-hero">
+    <div class="hero-text">
+      <h1>Computer Repair & IT Services in ${town}, NY</h1>
+      <p>Trusted IT consulting, managed services, and computer repair for homes and businesses in ${town}.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>IT Support for ${town}, NY</h2>
+    <p>
+      TNT Computers proudly serves the <strong>${town}</strong> community with reliable computer repair, IT consulting, and managed services. Whether you’re a small business or a local homeowner, we deliver fast, professional, and affordable IT support.
+    </p>
+
+    <h3>Our Services in ${town}</h3>
+    <ul>
+      <li>Computer Repair & Virus Removal</li>
+      <li>Managed IT Services (daily IT support)</li>
+      <li>Cybersecurity Solutions</li>
+      <li>Data Backup & Recovery</li>
+      <li>Networking & WiFi Setup</li>
+    </ul>
+
+    <h3>Why ${town} Chooses TNT Computers</h3>
+    <p>
+      With years of experience supporting Suffolk County businesses and residents, TNT Computers understands the unique needs of ${town}. We’re trusted for fast computer troubleshooting, ongoing IT management, and secure technology solutions.
+    </p>
+  </section>
+
+  <section class="cta-section">
+    <h2>Need IT Help in ${town}?</h2>
+    <p>Contact TNT Computers today for professional IT services and computer repair in ${town}, NY.</p>
+    <a href="../index.html#contact" class="btn">Request Service</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 TNT Computers. All Rights Reserved.</p>
+    <p>Serving Smithtown, Suffolk County & Long Island, NY</p>
+    <p><a href="../service-areas.html" class="footer-link">See All Service Areas</a></p>
+  </footer>
+</body>
+</html>`;
+    }
+
+    function generatePages() {
+      const towns = getTowns();
+      const outputDiv = document.getElementById("output");
+      outputDiv.innerHTML = "";
+
+      towns.forEach(town => {
+        const filename = town.toLowerCase().replace(/\s+/g, "-") + ".html";
+        const html = generateTemplate(town);
+
+        const container = document.createElement("div");
+        container.innerHTML = `<h3>${filename}</h3><pre>${html}</pre>`;
+        outputDiv.appendChild(container);
+      });
+    }
+
+    function downloadZip() {
+      const towns = getTowns();
+      const zip = new JSZip();
+      const folder = zip.folder("service-areas");
+
+      towns.forEach(town => {
+        const filename = town.toLowerCase().replace(/\s+/g, "-") + ".html";
+        const html = generateTemplate(town);
+        folder.file(filename, html);
+      });
+
+      zip.generateAsync({ type: "blob" }).then(content => {
+        saveAs(content, "service-areas.zip");
+      });
+    }
+
+    function downloadZipWithHub() {
+      const towns = getTowns();
+      const zip = new JSZip();
+      const folder = zip.folder("service-areas");
+
+      // Add each town page
+      towns.forEach(town => {
+        const filename = town.toLowerCase().replace(/\s+/g, "-") + ".html";
+        const html = generateTemplate(town);
+        folder.file(filename, html);
+      });
+
+      // Create service-areas.html hub page
+      let hubList = towns.map(town => {
+        const filename = town.toLowerCase().replace(/\s+/g, "-") + ".html";
+        return `<li><a href="service-areas/${filename}">Computer Repair & IT Services in ${town}, NY</a></li>`;
+      }).join("\n");
+
+      const hubHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Areas | TNT Computers</title>
+  <meta name="description" content="TNT Computers provides IT services and computer repair across Suffolk County, NY including Smithtown, Hauppauge, Commack, and more.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">TNT Computers</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#reviews">Reviews</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero small-hero">
+    <div class="hero-text">
+      <h1>Our Service Areas in Suffolk County, NY</h1>
+      <p>We proudly provide IT support and computer repair to businesses and residents across Long Island.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Where We Work</h2>
+    <ul class="service-area-list">
+      ${hubList}
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 TNT Computers. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>`;
+
+      zip.file("service-areas.html", hubHtml);
+
+      // Download
+      zip.generateAsync({ type: "blob" }).then(content => {
+        saveAs(content, "service-areas-with-hub.zip");
+      });
+    }
+  </script>
+</body>
+</html>

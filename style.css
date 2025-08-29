@@ -1,277 +1,190 @@
-/* ================================
-   TNT Computers - Global Styles
-   ================================ */
-
-/* Color Variables */
-:root {
-  --brand-blue: #0056b3;
-  --brand-blue-dark: #003d80;
-  --highlight-yellow: #ffdd57;
-  --text-dark: #333;
-  --text-light: #f8f8f8;
-  --bg-light: #f9f9f9;
-  --white: #fff;
-}
-
-/* Reset & Base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Reset + Base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-  font-family: "Arial", sans-serif;
+  font-family: Arial, sans-serif;
   line-height: 1.6;
-  background: var(--bg-light);
-  color: var(--text-dark);
-  scroll-behavior: smooth;
+  background: #fff;
+  color: #222;
 }
 
 /* Navbar */
-header {
-  background: var(--brand-blue);
-  color: var(--white);
-  padding: 15px 20px;
+.navbar {
+  background: #0056b3;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+/* Sticky Navbar */
+.navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  background: #004aad; /* Your blue */
   z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-header.scrolled {
-  background: var(--brand-blue-dark);
+/* Add padding so content doesn’t hide under navbar */
+body {
+  padding-top: 80px; /* adjust if your navbar height changes */
 }
 
-header h1 {
-  font-size: 1.8rem;
+
+.navbar .logo {
+  font-size: 1.5rem;
   font-weight: bold;
 }
-
-header nav ul {
-  display: flex;
+.navbar .nav-links {
   list-style: none;
+  display: flex;
+  gap: 1.5rem;
 }
-
-header nav ul li {
-  margin-left: 20px;
-}
-
-header nav ul li a {
-  color: var(--white);
+.navbar .nav-links a {
+  color: #fff;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s;
+}
+.navbar .nav-links a:hover {
+  text-decoration: underline;
 }
 
-header nav ul li a:hover {
-  color: var(--highlight-yellow);
-}
 
-/* Mobile Nav */
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background: var(--brand-blue);
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 200px;
-    border-radius: 0 0 5px 5px;
-  }
-
-  nav ul.showing {
-    display: flex;
-  }
-
-  nav ul li {
-    margin: 15px 0;
-  }
-}
-
-/* Hero Section */
-#hero {
-  height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-              url('https://source.unsplash.com/1600x900/?technology,computer') no-repeat center center/cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Hero */
+.hero {
+  background: url('hero-bg.jpg') center/cover no-repeat;
+  color: #fff;
   text-align: center;
-  padding-top: 80px;
+  padding: 6rem 2rem;
 }
-
-#hero h1 {
-  font-size: 3rem;
-  color: var(--white);
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+.hero .hero-text {
+  max-width: 800px;
+  margin: auto;
+  background: rgba(0,0,0,0.5);
+  padding: 2rem;
+  border-radius: 8px;
 }
-
-#hero p {
-  margin: 20px 0;
-  color: var(--text-light);
-  font-size: 1.2rem;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-}
-
-/* Global Buttons */
-button,
-input[type="submit"] {
-  padding: 12px 28px;
-  font-size: 1.1rem;
-  border: none;
+.hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+.hero p { font-size: 1.2rem; margin-bottom: 1.5rem; }
+.btn {
+  display: inline-block;
+  background: #ff6600;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
   border-radius: 5px;
-  background: var(--brand-blue);
-  color: var(--white);
   font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s;
 }
+.btn:hover { background: #cc5200; }
 
-button:hover,
-input[type="submit"]:hover {
-  background: var(--brand-blue-dark);
-  transform: scale(1.05);
+/* Content Sections */
+.content-section {
+  padding: 3rem 2rem;
+  max-width: 1100px;
+  margin: auto;
 }
-
-/* Sections */
-section {
-  padding: 80px 20px;
+.content-section h2 {
   text-align: center;
+  margin-bottom: 2rem;
+  color: #0056b3;
 }
-
-section h2 {
-  font-size: 2.2rem;
-  margin-bottom: 40px;
-  color: var(--brand-blue);
-}
+.alt-bg { background: #f9f9f9; }
 
 /* Services */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
 .service {
-  background: var(--white);
-  padding: 20px;
+  background: #f1f1f1;
+  padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
-  border: 2px solid transparent;
 }
-
-.service:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-  border: 2px solid var(--brand-blue);
-}
-
-.service i {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-  color: var(--brand-blue);
-  transition: color 0.3s ease;
-}
-
-.service:hover i {
-  color: var(--brand-blue-dark);
-}
+.service h3 { color: #0056b3; margin-bottom: 1rem; }
 
 /* Reviews */
-.review {
-  background: var(--white);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
-  border: 2px solid transparent;
+.reviews {
+  display: grid;
+  gap: 1.5rem;
+}
+.reviews blockquote {
+  background: #fff;
+  border-left: 5px solid #0056b3;
+  padding: 1rem;
+  font-style: italic;
+  border-radius: 4px;
 }
 
-.review:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-  border: 2px solid var(--brand-blue);
-}
-
-.review i {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: var(--brand-blue);
-  transition: color 0.3s ease;
-}
-
-.review:hover i {
-  color: var(--brand-blue-dark);
-}
-
-/* Contact Form */
+/* Contact */
 .contact-form {
+  display: grid;
+  gap: 1rem;
   max-width: 600px;
-  margin: auto;
-  background: var(--white);
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin: 2rem auto 0;
 }
-
 .contact-form input,
 .contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 1rem;
 }
+.contact-form button {
+  background: #0056b3;
+  color: #fff;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.contact-form button:hover { background: #003d80; }
 
 /* Footer */
 footer {
-  background: var(--brand-blue);
-  color: var(--white);
+  background: #222;
+  color: #ddd;
   text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+  padding: 2rem;
 }
-
-/* Animations */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s ease forwards;
+footer a {
+  color: #ff6600;
+  text-decoration: none;
 }
+footer a:hover { text-decoration: underline; }
 
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
   }
 }
 
-.pulse-once {
-  animation: pulse 0.5s ease;
+/* Towns Grid */
+.towns-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.towns-grid a {
+  background: #f1f1f1;
+  padding: 0.75rem;
+  border-radius: 6px;
+  text-align: center;
+  text-decoration: none;
+  color: #0056b3;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.towns-grid a:hover {
+  background: #0056b3;
+  color: #fff;
 }
 
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-  100% { transform: scale(1); }
-}
 
-.hero-fade {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s ease forwards;
-}

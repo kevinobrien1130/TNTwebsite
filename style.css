@@ -120,6 +120,30 @@ body {
   border-radius: 4px;
 }
 
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.service-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #007BFF;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.service-btn:hover {
+  background: #0056b3;
+}
+
+
 /* Contact */
 .contact-form {
   display: grid;

@@ -3,72 +3,393 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Microsoft Cloud Specialists | TNT Computers</title>
+  <title>Microsoft Cloud Specialists | TNT Computers Suffolk County</title>
+  <meta name="description" content="Expert Microsoft 365 and Azure cloud solutions for Suffolk County businesses. TNT Computers specializes in cloud migration, setup, and support.">
   <link rel="stylesheet" href="../style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
   <!-- Navbar -->
-  <header class="navbar">
-    <div class="container">
-      <a href="../index.html" class="logo">TNT Computers</a>
-      <nav>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../index.html#services" class="active">Services</a></li>
-          <li><a href="../service-areas.html">Service Areas</a></li>
-          <li><a href="../index.html#reviews">Reviews</a></li>
-          <li><a href="../index.html#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header>
+    <nav class="navbar">
+      <div class="nav-brand">
+        <div class="logo">
+          <i class="fas fa-bolt"></i>
+          <a href="../index.html">TNT Computers</a>
+        </div>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#services" class="active">Services</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#reviews">Reviews</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="../service-areas.html">Service Areas</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
   </header>
 
-  <!-- Hero -->
-  <section class="hero small-hero">
+  <!-- Service Hero -->
+  <section class="service-hero">
+    <div class="hero-background">
+      <div class="hero-overlay"></div>
+    </div>
     <div class="container">
-      <h1>Microsoft Cloud Specialists</h1>
-      <p>Empowering your business with Microsoft 365 and Azure solutions.</p>
+      <div class="service-hero-content">
+        <div class="service-icon">
+          <i class="fab fa-microsoft"></i>
+        </div>
+        <h1>Microsoft Cloud Specialists</h1>
+        <p>Empowering your business with Microsoft 365 and Azure cloud solutions</p>
+        <div class="hero-features">
+          <div class="feature">
+            <i class="fas fa-cloud"></i>
+            <span>Cloud Migration</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-users"></i>
+            <span>Teams & Collaboration</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-shield-alt"></i>
+            <span>Security & Compliance</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Main Content -->
-  <section class="content-section">
+  <section class="service-content">
     <div class="container">
-      <h2>Expert Microsoft Cloud Solutions</h2>
-      <p>
-        At TNT Computers, we specialize in helping businesses get the most out of Microsoft’s
-        cloud ecosystem — including <strong>Microsoft 365</strong> and <strong>Microsoft Azure</strong>.
-        Whether you’re migrating from on-premises servers, upgrading your email system, or
-        looking to collaborate more effectively, our team of experts has you covered.
-      </p>
+      <div class="content-grid">
+        <div class="main-content">
+          <div class="content-card">
+            <h2>Expert Microsoft Cloud Solutions</h2>
+            <p>At TNT Computers, we specialize in helping businesses get the most out of Microsoft's cloud ecosystem — including <strong>Microsoft 365</strong> and <strong>Microsoft Azure</strong>. Whether you're migrating from on-premises servers, upgrading your email system, or looking to collaborate more effectively, our team of experts has you covered.</p>
+            
+            <div class="service-image">
+              <svg width="100%" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Microsoft Cloud Illustration -->
+                <defs>
+                  <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#0078d4;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#106ebe;stop-opacity:1" />
+                  </linearGradient>
+                  <linearGradient id="azureGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#ff6600;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#e55a00;stop-opacity:1" />
+                  </linearGradient>
+                </defs>
+                
+                <!-- Cloud shape -->
+                <path d="M 150 80 Q 130 60 160 60 Q 170 50 190 55 Q 210 45 230 55 Q 250 60 240 80 Q 250 90 230 95 Q 210 100 190 95 Q 170 100 160 95 Q 130 100 150 80 Z" fill="url(#cloudGrad)" opacity="0.8"/>
+                
+                <!-- Microsoft apps icons in cloud -->
+                <rect x="165" y="70" width="15" height="15" fill="#fff" rx="2"/>
+                <rect x="185" y="70" width="15" height="15" fill="#fff" rx="2"/>
+                <rect x="205" y="70" width="15" height="15" fill="#fff" rx="2"/>
+                <rect x="175" y="82" width="15" height="15" fill="#fff" rx="2"/>
+                <rect x="195" y="82" width="15" height="15" fill="#fff" rx="2"/>
+                
+                <!-- Devices connecting to cloud -->
+                <!-- Laptop -->
+                <rect x="50" y="130" width="60" height="35" fill="#333" rx="4"/>
+                <rect x="55" y="135" width="50" height="25" fill="url(#cloudGrad)" rx="2"/>
+                
+                <!-- Mobile -->
+                <rect x="130" y="140" width="25" height="40" fill="#333" rx="8"/>
+                <rect x="135" y="145" width="15" height="30" fill="url(#cloudGrad)" rx="2"/>
+                
+                <!-- Desktop -->
+                <rect x="270" y="140" width="50" height="30" fill="#333" rx="4"/>
+                <rect x="275" y="145" width="40" height="20" fill="url(#cloudGrad)" rx="2"/>
+                <rect x="290" y="170" width="10" height="8" fill="#666"/>
+                
+                <!-- Tablet -->
+                <rect x="340" y="130" width="30" height="40" fill="#333" rx="6"/>
+                <rect x="345" y="135" width="20" height="30" fill="url(#cloudGrad)" rx="2"/>
+                
+                <!-- Connection lines to cloud -->
+                <line x1="80" y1="130" x2="160" y2="95" stroke="#0078d4" stroke-width="2" stroke-dasharray="3,3"/>
+                <line x1="142" y1="140" x2="170" y2="95" stroke="#0078d4" stroke-width="2" stroke-dasharray="3,3"/>
+                <line x1="295" y1="140" x2="220" y2="95" stroke="#0078d4" stroke-width="2" stroke-dasharray="3,3"/>
+                <line x1="355" y1="130" x2="230" y2="95" stroke="#0078d4" stroke-width="2" stroke-dasharray="3,3"/>
+                
+                <!-- Microsoft logos/symbols -->
+                <rect x="20" y="40" width="25" height="25" fill="#ff6600" rx="3"/>
+                <text x="32" y="58" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">M</text>
+                
+                <rect x="350" y="40" width="25" height="25" fill="#0078d4" rx="3"/>
+                <text x="362" y="58" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">365</text>
+                
+                <!-- Data flow arrows -->
+                <path d="M 100 110 L 110 110 L 107 107 M 107 113 L 110 110" stroke="#28a745" stroke-width="2" fill="none"/>
+                <path d="M 250 110 L 240 110 L 243 107 M 243 113 L 240 110" stroke="#28a745" stroke-width="2" fill="none"/>
+              </svg>
+            </div>
+          </div>
 
-      <h3>Our Microsoft 365 Services</h3>
-      <ul>
-        <li>Email migration to Microsoft Exchange Online</li>
-        <li>SharePoint and OneDrive setup for file storage and sharing</li>
-        <li>Teams deployment for collaboration and communication</li>
-        <li>Licensing management and cost optimization</li>
-        <li>Security hardening and compliance support</li>
-      </ul>
+          <div class="content-card">
+            <h3><i class="fab fa-microsoft"></i> Our Microsoft 365 Services</h3>
+            <div class="service-list">
+              <div class="service-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h4>Email Migration to Exchange Online</h4>
+                  <p>Seamless migration from on-premises email systems to Microsoft Exchange Online with minimal downtime</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <i class="fas fa-share-alt"></i>
+                <div>
+                  <h4>SharePoint & OneDrive Setup</h4>
+                  <p>Configure SharePoint sites and OneDrive for secure file storage, sharing, and collaboration</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <i class="fas fa-users"></i>
+                <div>
+                  <h4>Microsoft Teams Deployment</h4>
+                  <p>Full Teams setup for video conferencing, chat, and seamless team collaboration</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <i class="fas fa-key"></i>
+                <div>
+                  <h4>Licensing Management</h4>
+                  <p>Optimize your Microsoft 365 licensing for maximum value and cost efficiency</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <i class="fas fa-shield-virus"></i>
+                <div>
+                  <h4>Security Hardening & Compliance</h4>
+                  <p>Advanced security configuration and compliance setup to protect your business data</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-      <h3>Our Microsoft Azure Services</h3>
-      <ul>
-        <li>Cloud server hosting and infrastructure setup</li>
-        <li>Data backup and disaster recovery planning</li>
-        <li>Identity and access management with Azure Active Directory</li>
-        <li>Virtual desktops and remote work solutions</li>
-      </ul>
+          <div class="content-card">
+            <h3><i class="fab fa-microsoft"></i> Our Microsoft Azure Services</h3>
+            <div class="service-list">
+              <div class="service-item">
+                <i class="fas fa-server"></i>
+                <div>
+                  <h4>Cloud Server Hosting</h4>
+                  <p>Scalable Azure virtual machines and infrastructure setup tailored to your business needs</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <i class="fas fa-database"></i>
+                <div>
+                  <h4>Data Backup & Disaster Recovery</h4>
+                  <p>Comprehensive backup solutions and disaster recovery planning using Azure services</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <i class="fas fa-id-card"></i>
+                <div>
+                  <h4>Azure Active Directory</h4>
+                  <p>Identity and access management with Azure AD for secure user authentication</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <i class="fas fa-desktop"></i>
+                <div>
+                  <h4>Virtual Desktops & Remote Work</h4>
+                  <p>Azure Virtual Desktop solutions for secure remote work capabilities</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-      <h3>Why Choose TNT Computers?</h3>
-      <p>
-        With years of experience supporting businesses in <strong>Smithtown, Suffolk County,
-        and across Long Island</strong>, TNT Computers is your trusted Microsoft Cloud partner.
-        We ensure smooth migrations, maximum uptime, and solutions that fit your budget.
-      </p>
+          <div class="content-card">
+            <h3><i class="fas fa-star"></i> Why Choose TNT Computers?</h3>
+            <p>With years of experience supporting businesses in <strong>Smithtown, Suffolk County, and across Long Island</strong>, TNT Computers is your trusted Microsoft Cloud partner. We ensure smooth migrations, maximum uptime, and solutions that fit your budget.</p>
+            
+            <div class="benefits-grid">
+              <div class="benefit">
+                <i class="fas fa-certificate"></i>
+                <h4>Microsoft Certified</h4>
+                <p>Certified Microsoft partners and technicians</p>
+              </div>
+              <div class="benefit">
+                <i class="fas fa-clock"></i>
+                <h4>Minimal Downtime</h4>
+                <p>Smooth migrations with business continuity</p>
+              </div>
+              <div class="benefit">
+                <i class="fas fa-graduation-cap"></i>
+                <h4>User Training</h4>
+                <p>Comprehensive training for your team</p>
+              </div>
+              <div class="benefit">
+                <i class="fas fa-headset"></i>
+                <h4>Ongoing Support</h4>
+                <p>Continued support after implementation</p>
+              </div>
+            </div>
+          </div>
 
-      <div class="cta-box">
-        <p>Ready to modernize your IT with Microsoft 365 and Azure?</p>
-        <a href="../index.html#contact" class="btn">Contact Us Today</a>
+          <div class="content-card">
+            <h3><i class="fas fa-route"></i> Our Cloud Migration Process</h3>
+            <div class="process-steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4>Assessment & Planning</h4>
+                  <p>Comprehensive evaluation of your current systems and migration planning</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4>Environment Preparation</h4>
+                  <p>Set up and configure your Microsoft 365 or Azure environment</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4>Data Migration</h4>
+                  <p>Secure migration of your data, emails, and files to the cloud</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <h4>Testing & Validation</h4>
+                  <p>Thorough testing to ensure everything works perfectly</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                  <h4>Training & Support</h4>
+                  <p>User training and ongoing support for your team</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <h3><i class="fas fa-tools"></i> Microsoft 365 Apps We Specialize In</h3>
+            <div class="apps-grid">
+              <div class="app-item">
+                <i class="fas fa-envelope" style="color: #0078d4;"></i>
+                <h4>Outlook</h4>
+                <p>Email, calendar, and contacts</p>
+              </div>
+              <div class="app-item">
+                <i class="fas fa-users" style="color: #6264a7;"></i>
+                <h4>Teams</h4>
+                <p>Video conferencing and chat</p>
+              </div>
+              <div class="app-item">
+                <i class="fas fa-share-alt" style="color: #0078d4;"></i>
+                <h4>SharePoint</h4>
+                <p>Document management</p>
+              </div>
+              <div class="app-item">
+                <i class="fas fa-cloud" style="color: #0078d4;"></i>
+                <h4>OneDrive</h4>
+                <p>File storage and sync</p>
+              </div>
+              <div class="app-item">
+                <i class="fas fa-file-word" style="color: #2b579a;"></i>
+                <h4>Office Apps</h4>
+                <p>Word, Excel, PowerPoint</p>
+              </div>
+              <div class="app-item">
+                <i class="fas fa-shield-alt" style="color: #0078d4;"></i>
+                <h4>Security Center</h4>
+                <p>Advanced threat protection</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <div class="cta-card">
+            <div class="cta-icon">
+              <i class="fab fa-microsoft"></i>
+            </div>
+            <h3>Ready for the Cloud?</h3>
+            <p>Start your Microsoft 365 or Azure journey today</p>
+            <a href="../index.html#contact" class="btn btn-primary">
+              <i class="fas fa-rocket"></i>
+              Start Migration
+            </a>
+          </div>
+
+          <div class="info-card">
+            <h4><i class="fas fa-dollar-sign"></i> Cost Benefits</h4>
+            <ul>
+              <li>Reduce hardware costs</li>
+              <li>Predictable monthly pricing</li>
+              <li>Scale up or down as needed</li>
+              <li>No maintenance overhead</li>
+              <li>Always up-to-date software</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4><i class="fas fa-shield-check"></i> Security Features</h4>
+            <ul>
+              <li>Advanced threat protection</li>
+              <li>Data loss prevention</li>
+              <li>Multi-factor authentication</li>
+              <li>Compliance management</li>
+              <li>Enterprise-grade security</li>
+            </ul>
+          </div>
+
+          <div class="related-services">
+            <h4>Related Services</h4>
+            <a href="managed-services.html" class="service-link">
+              <i class="fas fa-cogs"></i>
+              Managed IT Services
+            </a>
+            <a href="it-consulting.html" class="service-link">
+              <i class="fas fa-laptop-code"></i>
+              IT Consulting
+            </a>
+            <a href="network-solutions.html" class="service-link">
+              <i class="fas fa-network-wired"></i>
+              Network Solutions
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <div class="cta-text">
+          <h2>Ready to Modernize Your IT with Microsoft 365 and Azure?</h2>
+          <p>Let TNT Computers guide your business through a successful cloud transformation. Contact us today to discuss your Microsoft cloud needs.</p>
+        </div>
+        <div class="cta-buttons">
+          <a href="../index.html#contact" class="btn btn-primary">
+            <i class="fas fa-envelope"></i>
+            Contact Us Today
+          </a>
+          <a href="tel:+16316785773" class="btn btn-secondary">
+            <i class="fas fa-phone"></i>
+            Call Now
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -76,8 +397,505 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 TNT Computers. All rights reserved.</p>
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <i class="fas fa-bolt"></i>
+            TNT Computers
+          </div>
+          <p>Your trusted IT partner serving Suffolk County and Long Island since 2014.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/TNTComputersLI" target="_blank">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#services">Services</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#reviews">Reviews</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="computer-repair.html">Computer Repair</a></li>
+            <li><a href="it-consulting.html">IT Consulting</a></li>
+            <li><a href="managed-services.html">Managed IT Services</a></li>
+            <li><a href="microsoft-cloud.html">Microsoft 365</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <ul>
+            <li><i class="fas fa-phone"></i> (631) 678-5773</li>
+            <li><i class="fas fa-envelope"></i> info@tntcomputers.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> Nesonset, NY 11767</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 TNT Computers. All rights reserved.</p>
+        <p>Serving Smithtown, Suffolk County & Long Island, NY with pride.</p>
+      </div>
     </div>
   </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+
+    // Smooth Scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+          navLinks.classList.remove('active');
+          hamburger.classList.remove('active');
+        }
+      });
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.style.background = 'rgba(0, 74, 173, 0.95)';
+        navbar.style.backdropFilter = 'blur(10px)';
+      } else {
+        navbar.style.background = '#004aad';
+        navbar.style.backdropFilter = 'none';
+      }
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.content-card, .cta-card, .info-card, .step, .app-item').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
+
+  <style>
+    /* Service-specific styles */
+    .service-hero {
+      background: linear-gradient(135deg, #004aad 0%, #0056b3 50%, #007bff 100%);
+      color: #fff;
+      padding: 6rem 0 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .service-icon {
+      width: 100px;
+      height: 100px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 2rem;
+      border: 3px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .service-icon i {
+      font-size: 3rem;
+      color: #ff6600;
+    }
+
+    .service-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .service-hero p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+
+    .hero-features {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    .feature i {
+      color: #ff6600;
+      font-size: 1.2rem;
+    }
+
+    .service-content {
+      padding: 4rem 0;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .content-card {
+      background: #fff;
+      padding: 2.5rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+      border: 1px solid #f0f0f0;
+    }
+
+    .content-card h2, .content-card h3 {
+      color: #004aad;
+      margin-bottom: 1.5rem;
+    }
+
+    .content-card h3 i {
+      color: #ff6600;
+      margin-right: 0.5rem;
+    }
+
+    .service-image {
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .service-list {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .service-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .service-item:hover {
+      background: #e9ecef;
+      transform: translateX(5px);
+    }
+
+    .service-item i {
+      color: #ff6600;
+      font-size: 1.5rem;
+      margin-top: 0.2rem;
+      min-width: 24px;
+    }
+
+    .service-item h4 {
+      color: #004aad;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .service-item p {
+      color: #666;
+      margin: 0;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .benefit {
+      text-align: center;
+      padding: 1.5rem;
+      background: #f8f9fa;
+      border-radius: 10px;
+    }
+
+    .benefit i {
+      color: #ff6600;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .benefit h4 {
+      color: #004aad;
+      margin-bottom: 0.5rem;
+    }
+
+    .process-steps {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.5rem;
+      background: #f8f9fa;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .step:hover {
+      background: #e9ecef;
+      transform: translateX(5px);
+    }
+
+    .step-number {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #ff6600, #e55a00);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .step-content h4 {
+      color: #004aad;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .step-content p {
+      color: #666;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .app-item {
+      text-align: center;
+      padding: 1.5rem;
+      background: #f8f9fa;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .app-item:hover {
+      background: #e9ecef;
+      transform: translateY(-5px);
+    }
+
+    .app-item i {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .app-item h4 {
+      color: #004aad;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .app-item p {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .cta-card {
+      background: linear-gradient(135deg, #004aad, #007bff);
+      color: #fff;
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .cta-icon {
+      width: 60px;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+    }
+
+    .cta-icon i {
+      font-size: 1.5rem;
+      color: #ff6600;
+    }
+
+    .info-card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.5rem;
+    }
+
+    .info-card h4 {
+      color: #004aad;
+      margin-bottom: 1rem;
+    }
+
+    .info-card h4 i {
+      color: #ff6600;
+      margin-right: 0.5rem;
+    }
+
+    .info-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .info-card ul li {
+      padding: 0.5rem 0;
+      color: #666;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .info-card ul li:last-child {
+      border-bottom: none;
+    }
+
+    .related-services h4 {
+      color: #004aad;
+      margin-bottom: 1rem;
+      padding: 0 1.5rem;
+    }
+
+    .service-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 1.5rem;
+      color: #666;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .service-link:hover {
+      color: #004aad;
+      background: #f8f9fa;
+    }
+
+    .service-link i {
+      color: #ff6600;
+      font-size: 1.1rem;
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      padding: 4rem 0;
+    }
+
+    .cta-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .cta-text h2 {
+      color: #004aad;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .service-hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero-features {
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .feature {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.3rem;
+      }
+
+      .benefits-grid, .apps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+  </style>
 </body>
 </html>

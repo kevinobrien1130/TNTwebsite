@@ -3,70 +3,884 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Network Solutions | TNT Computers Long Island</title>
-<meta name="description" content="Secure, scalable network solutions for businesses across Suffolk County and Long Island. TNT Computers designs, installs, and supports wired and wireless networks.">
-
+  <title>Network Solutions | TNT Computers Long Island</title>
+  <meta name="description" content="Secure, scalable network solutions for businesses across Suffolk County and Long Island. TNT Computers designs, installs, and supports wired and wireless networks.">
   <link rel="stylesheet" href="../style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-<header class="navbar">
-  <div class="container">
-    <a href="../index.html" class="logo">TNT Computers</a>
-    <nav>
-      <ul>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-brand">
+        <div class="logo">
+          <i class="fas fa-bolt"></i>
+          <a href="../index.html">TNT Computers</a>
+        </div>
+      </div>
+      <ul class="nav-links" id="nav-links">
         <li><a href="../index.html">Home</a></li>
         <li><a href="../index.html#services" class="active">Services</a></li>
-        <li><a href="../service-areas.html">Service Areas</a></li>
+        <li><a href="../index.html#about">About</a></li>
         <li><a href="../index.html#reviews">Reviews</a></li>
         <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="../service-areas.html">Service Areas</a></li>
       </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
-  </div>
-</header>
+  </header>
 
-<section class="hero small-hero">
-  <div class="container">
-    <h1>Network Solutions</h1>
-    <p>Secure, fast, and reliable networking for your business.</p>
-  </div>
-</section>
-
-<section class="content-section">
-  <div class="container">
-    <h2>Networking Designed for Your Business</h2>
-    <p>
-      Your network is the backbone of your business operations. At TNT Computers, 
-      we provide <strong>comprehensive network solutions</strong> that ensure 
-      your business stays connected, secure, and efficient.
-    </p>
-
-    <h3>Our Networking Services</h3>
-    <ul>
-      <li>Design and installation of wired and wireless networks</li>
-      <li>Firewall and security configurations</li>
-      <li>VPN setup for remote teams</li>
-      <li>Network monitoring and proactive maintenance</li>
-      <li>Performance optimization for speed and reliability</li>
-    </ul>
-
-    <h3>Why Choose TNT Computers?</h3>
-    <p>
-      We build networks that grow with your business. Whether you’re a small office 
-      or a multi-location company in <strong>Smithtown, Suffolk County, and across Long Island</strong>, 
-      we deliver secure and scalable networking solutions.
-    </p>
-
-    <div class="cta-box">
-      <p>Ready to improve your business network?</p>
-      <a href="../index.html#contact" class="btn">Request a Network Assessment</a>
+  <!-- Service Hero -->
+  <section class="service-hero">
+    <div class="hero-background">
+      <div class="hero-overlay"></div>
     </div>
-  </div>
-</section>
+    <div class="container">
+      <div class="service-hero-content">
+        <div class="service-icon">
+          <i class="fas fa-network-wired"></i>
+        </div>
+        <h1>Network Solutions</h1>
+        <p>Secure, fast, and reliable networking infrastructure for your business</p>
+        <div class="hero-features">
+          <div class="feature">
+            <i class="fas fa-wifi"></i>
+            <span>Wireless & Wired</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-shield-alt"></i>
+            <span>Secure Networks</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-expand-arrows-alt"></i>
+            <span>Scalable Solutions</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  <div class="container">
-    <p>&copy; 2025 TNT Computers. All rights reserved.</p>
-  </div>
-</footer>
+  <!-- Main Content -->
+  <section class="service-content">
+    <div class="container">
+      <div class="content-grid">
+        <div class="main-content">
+          <div class="content-card">
+            <h2>Networking Designed for Your Business</h2>
+            <p>Your network is the backbone of your business operations. At TNT Computers, we provide <strong>comprehensive network solutions</strong> that ensure your business stays connected, secure, and efficient.</p>
+            
+            <div class="service-image">
+              <svg width="100%" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Network Solutions Illustration -->
+                <defs>
+                  <linearGradient id="networkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#004aad;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#007bff;stop-opacity:1" />
+                  </linearGradient>
+                </defs>
+                
+                <!-- Central router/switch -->
+                <rect x="175" y="85" width="50" height="30" fill="url(#networkGrad)" rx="4"/>
+                <rect x="180" y="90" width="40" height="20" fill="#333" rx="2"/>
+                <circle cx="190" cy="100" r="3" fill="#28a745"/>
+                <circle cx="200" cy="100" r="3" fill="#28a745"/>
+                <circle cx="210" cy="100" r="3" fill="#28a745"/>
+                
+                <!-- Connected devices -->
+                <!-- Computer 1 -->
+                <rect x="50" y="50" width="40" height="25" fill="#333" rx="4"/>
+                <rect x="55" y="55" width="30" height="15" fill="url(#networkGrad)" rx="2"/>
+                
+                <!-- Computer 2 -->
+                <rect x="50" y="125" width="40" height="25" fill="#333" rx="4"/>
+                <rect x="55" y="130" width="30" height="15" fill="url(#networkGrad)" rx="2"/>
+                
+                <!-- Server -->
+                <rect x="310" y="80" width="40" height="40" fill="#666" rx="4"/>
+                <rect x="315" y="85" width="30" height="8" fill="#28a745" rx="1"/>
+                <rect x="315" y="95" width="30" height="8" fill="#28a745" rx="1"/>
+                <rect x="315" y="105" width="30" height="8" fill="#007bff" rx="1"/>
+                
+                <!-- Printer -->
+                <rect x="310" y="30" width="35" height="20" fill="#888" rx="3"/>
+                <rect x="315" y="35" width="25" height="10" fill="#fff" rx="1"/>
+                
+                <!-- Connection lines -->
+                <line x1="90" y1="62" x2="175" y2="95" stroke="#007bff" stroke-width="2"/>
+                <line x1="90" y1="137" x2="175" y2="105" stroke="#007bff" stroke-width="2"/>
+                <line x1="225" y1="100" x2="310" y2="100" stroke="#007bff" stroke-width="3"/>
+                <line x1="225" y1="95" x2="310" y2="40" stroke="#007bff" stroke-width="2"/>
+                
+                <!-- Wireless signals -->
+                <circle cx="200" cy="60" r="15" fill="none" stroke="#ff6600" stroke-width="2" opacity="0.6"/>
+                <circle cx="200" cy="60" r="25" fill="none" stroke="#ff6600" stroke-width="1.5" opacity="0.4"/>
+                <circle cx="200" cy="60" r="35" fill="none" stroke="#ff6600" stroke-width="1" opacity="0.2"/>
+                
+                <!-- Laptop (wireless) -->
+                <rect x="280" y="150" width="50" height="30" fill="#333" rx="4"/>
+                <rect x="285" y="155" width="40" height="20" fill="url(#networkGrad)" rx="2"/>
+                <path d="M 305 140 Q 310 135 315 140" stroke="#ff6600" stroke-width="2" fill="none"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <h3><i class="fas fa-tools"></i> Our Networking Services</h3>
+            <div class="service-list">
+              <div class="service-item">
+                <i class="fas fa-sitemap"></i>
+                <div>
+                  <h4>Network Design & Installation</h4>
+                  <p>Custom network design and professional installation of wired and wireless infrastructure</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <i class="fas fa-shield-alt"></i>
+                <div>
+                  <h4>Firewall & Security Configuration</h4>
+                  <p>Advanced security setup including firewalls, intrusion detection, and access controls</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <i class="fas fa-lock"></i>
+                <div>
+                  <h4>VPN Setup for Remote Teams</h4>
+                  <p>Secure remote access solutions for employees working from home or traveling</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <i class="fas fa-eye"></i>
+                <div>
+                  <h4>Network Monitoring & Maintenance</h4>
+                  <p>Continuous network monitoring and proactive maintenance to ensure optimal performance</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <i class="fas fa-tachometer-alt"></i>
+                <div>
+                  <h4>Performance Optimization</h4>
+                  <p>Network tuning and optimization for maximum speed, reliability, and efficiency</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <h3><i class="fas fa-star"></i> Why Choose TNT Computers?</h3>
+            <p>We build networks that grow with your business. Whether you're a small office or a multi-location company in <strong>Smithtown, Suffolk County, and across Long Island</strong>, we deliver secure and scalable networking solutions.</p>
+            
+            <div class="benefits-grid">
+              <div class="benefit">
+                <i class="fas fa-award"></i>
+                <h4>Certified Expertise</h4>
+                <p>Certified network engineers and technicians</p>
+              </div>
+              <div class="benefit">
+                <i class="fas fa-expand"></i>
+                <h4>Scalable Design</h4>
+                <p>Networks that grow with your business</p>
+              </div>
+              <div class="benefit">
+                <i class="fas fa-clock"></i>
+                <h4>Minimal Downtime</h4>
+                <p>Quick installation with minimal disruption</p>
+              </div>
+              <div class="benefit">
+                <i class="fas fa-headset"></i>
+                <h4>Ongoing Support</h4>
+                <p>Continued maintenance and support</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <h3><i class="fas fa-layer-group"></i> Network Solutions We Provide</h3>
+            <div class="solution-categories">
+              <div class="category">
+                <div class="category-header">
+                  <i class="fas fa-wifi"></i>
+                  <h4>Wireless Networks</h4>
+                </div>
+                <ul class="category-features">
+                  <li>Enterprise-grade WiFi access points</li>
+                  <li>Guest network configuration</li>
+                  <li>Wireless security and authentication</li>
+                  <li>Coverage optimization and site surveys</li>
+                </ul>
+              </div>
+              <div class="category">
+                <div class="category-header">
+                  <i class="fas fa-ethernet"></i>
+                  <h4>Wired Infrastructure</h4>
+                </div>
+                <ul class="category-features">
+                  <li>Structured cabling installation</li>
+                  <li>Managed switches and routers</li>
+                  <li>Network rack setup and organization</li>
+                  <li>Cable testing and certification</li>
+                </ul>
+              </div>
+              <div class="category">
+                <div class="category-header">
+                  <i class="fas fa-shield-virus"></i>
+                  <h4>Network Security</h4>
+                </div>
+                <ul class="category-features">
+                  <li>Next-generation firewalls</li>
+                  <li>Intrusion detection systems</li>
+                  <li>Network access control</li>
+                  <li>Security monitoring and alerts</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <h3><i class="fas fa-chart-line"></i> Our Network Implementation Process</h3>
+            <div class="process-steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4>Site Assessment</h4>
+                  <p>Comprehensive evaluation of your current network needs and physical environment</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4>Network Design</h4>
+                  <p>Custom network architecture designed for your specific requirements and future growth</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4>Professional Installation</h4>
+                  <p>Expert installation with minimal disruption to your daily operations</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <h4>Testing & Optimization</h4>
+                  <p>Thorough testing and fine-tuning to ensure optimal performance and security</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                  <h4>Documentation & Training</h4>
+                  <p>Complete documentation and staff training on your new network infrastructure</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <div class="cta-card">
+            <div class="cta-icon">
+              <i class="fas fa-search"></i>
+            </div>
+            <h3>Need a Network Assessment?</h3>
+            <p>Get a free evaluation of your current network infrastructure</p>
+            <a href="../index.html#contact" class="btn btn-primary">
+              <i class="fas fa-clipboard-check"></i>
+              Request Assessment
+            </a>
+          </div>
+
+          <div class="info-card">
+            <h4><i class="fas fa-building"></i> Network Types</h4>
+            <ul>
+              <li>Small Office Networks (5-25 users)</li>
+              <li>Medium Business (25-100 users)</li>
+              <li>Enterprise Networks (100+ users)</li>
+              <li>Multi-location setups</li>
+              <li>Remote work solutions</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4><i class="fas fa-cog"></i> Technologies We Work With</h4>
+            <ul>
+              <li>Cisco, Ubiquiti, SonicWall</li>
+              <li>WiFi 6/6E access points</li>
+              <li>Managed switches & routers</li>
+              <li>VLAN configuration</li>
+              <li>SD-WAN solutions</li>
+            </ul>
+          </div>
+
+          <div class="related-services">
+            <h4>Related Services</h4>
+            <a href="managed-services.html" class="service-link">
+              <i class="fas fa-cogs"></i>
+              Managed IT Services
+            </a>
+            <a href="it-consulting.html" class="service-link">
+              <i class="fas fa-laptop-code"></i>
+              IT Consulting
+            </a>
+            <a href="computer-repair.html" class="service-link">
+              <i class="fas fa-tools"></i>
+              Computer Repair
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <div class="cta-text">
+          <h2>Ready to Improve Your Business Network?</h2>
+          <p>Let TNT Computers design and implement a network solution that powers your business growth. Contact us today for a free network assessment.</p>
+        </div>
+        <div class="cta-buttons">
+          <a href="../index.html#contact" class="btn btn-primary">
+            <i class="fas fa-envelope"></i>
+            Request a Network Assessment
+          </a>
+          <a href="tel:+16316785773" class="btn btn-secondary">
+            <i class="fas fa-phone"></i>
+            Call Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <i class="fas fa-bolt"></i>
+            TNT Computers
+          </div>
+          <p>Your trusted IT partner serving Suffolk County and Long Island since 2014.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/TNTComputersLI" target="_blank">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#services">Services</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#reviews">Reviews</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="computer-repair.html">Computer Repair</a></li>
+            <li><a href="it-consulting.html">IT Consulting</a></li>
+            <li><a href="managed-services.html">Managed IT Services</a></li>
+            <li><a href="microsoft-cloud.html">Microsoft 365</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <ul>
+            <li><i class="fas fa-phone"></i> (631) 678-5773</li>
+            <li><i class="fas fa-envelope"></i> info@tntcomputers.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> Nesonset, NY 11767</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 TNT Computers. All rights reserved.</p>
+        <p>Serving Smithtown, Suffolk County & Long Island, NY with pride.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+
+    // Smooth Scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+          navLinks.classList.remove('active');
+          hamburger.classList.remove('active');
+        }
+      });
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.style.background = 'rgba(0, 74, 173, 0.95)';
+        navbar.style.backdropFilter = 'blur(10px)';
+      } else {
+        navbar.style.background = '#004aad';
+        navbar.style.backdropFilter = 'none';
+      }
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.content-card, .cta-card, .info-card, .category, .step').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
+
+  <style>
+    /* Service-specific styles */
+    .service-hero {
+      background: linear-gradient(135deg, #004aad 0%, #0056b3 50%, #007bff 100%);
+      color: #fff;
+      padding: 6rem 0 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .service-icon {
+      width: 100px;
+      height: 100px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 2rem;
+      border: 3px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .service-icon i {
+      font-size: 3rem;
+      color: #ff6600;
+    }
+
+    .service-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .service-hero p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+
+    .hero-features {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    .feature i {
+      color: #ff6600;
+      font-size: 1.2rem;
+    }
+
+    .service-content {
+      padding: 4rem 0;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .content-card {
+      background: #fff;
+      padding: 2.5rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+      border: 1px solid #f0f0f0;
+    }
+
+    .content-card h2, .content-card h3 {
+      color: #004aad;
+      margin-bottom: 1.5rem;
+    }
+
+    .content-card h3 i {
+      color: #ff6600;
+      margin-right: 0.5rem;
+    }
+
+    .service-image {
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .service-list {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .service-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .service-item:hover {
+      background: #e9ecef;
+      transform: translateX(5px);
+    }
+
+    .service-item i {
+      color: #ff6600;
+      font-size: 1.5rem;
+      margin-top: 0.2rem;
+      min-width: 24px;
+    }
+
+    .service-item h4 {
+      color: #004aad;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .service-item p {
+      color: #666;
+      margin: 0;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .benefit {
+      text-align: center;
+      padding: 1.5rem;
+      background: #f8f9fa;
+      border-radius: 10px;
+    }
+
+    .benefit i {
+      color: #ff6600;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .benefit h4 {
+      color: #004aad;
+      margin-bottom: 0.5rem;
+    }
+
+    .solution-categories {
+      display: grid;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    .category {
+      background: #f8f9fa;
+      border-radius: 15px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .category:hover {
+      background: #e9ecef;
+      transform: translateX(5px);
+    }
+
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .category-header i {
+      color: #ff6600;
+      font-size: 2rem;
+    }
+
+    .category-header h4 {
+      color: #004aad;
+      font-size: 1.3rem;
+      margin: 0;
+    }
+
+    .category-features {
+      list-style: none;
+      padding: 0;
+    }
+
+    .category-features li {
+      padding: 0.5rem 0;
+      color: #666;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .category-features li:before {
+      content: "•";
+      color: #007bff;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .process-steps {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.5rem;
+      background: #f8f9fa;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .step:hover {
+      background: #e9ecef;
+      transform: translateX(5px);
+    }
+
+    .step-number {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #ff6600, #e55a00);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .step-content h4 {
+      color: #004aad;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .step-content p {
+      color: #666;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .cta-card {
+      background: linear-gradient(135deg, #004aad, #007bff);
+      color: #fff;
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .cta-icon {
+      width: 60px;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+    }
+
+    .cta-icon i {
+      font-size: 1.5rem;
+      color: #ff6600;
+    }
+
+    .info-card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.5rem;
+    }
+
+    .info-card h4 {
+      color: #004aad;
+      margin-bottom: 1rem;
+    }
+
+    .info-card h4 i {
+      color: #ff6600;
+      margin-right: 0.5rem;
+    }
+
+    .info-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .info-card ul li {
+      padding: 0.5rem 0;
+      color: #666;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .info-card ul li:last-child {
+      border-bottom: none;
+    }
+
+    .related-services h4 {
+      color: #004aad;
+      margin-bottom: 1rem;
+      padding: 0 1.5rem;
+    }
+
+    .service-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 1.5rem;
+      color: #666;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .service-link:hover {
+      color: #004aad;
+      background: #f8f9fa;
+    }
+
+    .service-link i {
+      color: #ff6600;
+      font-size: 1.1rem;
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      padding: 4rem 0;
+    }
+
+    .cta-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .cta-text h2 {
+      color: #004aad;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .service-hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero-features {
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .feature {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.3rem;
+      }
+
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+  </style>
 </body>
 </html>

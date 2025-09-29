@@ -3,71 +3,761 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IT Consulting Services | TNT Computers Suffolk County</title>
-<meta name="description" content="Expert IT consulting in Suffolk County. TNT Computers helps businesses plan, upgrade, and manage technology solutions tailored to your needs.">
-
+  <title>IT Consulting Services | TNT Computers Suffolk County</title>
+  <meta name="description" content="Expert IT consulting in Suffolk County. TNT Computers helps businesses plan, upgrade, and manage technology solutions tailored to your needs.">
   <link rel="stylesheet" href="../style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-<header class="navbar">
-  <div class="container">
-    <a href="../index.html" class="logo">TNT Computers</a>
-    <nav>
-      <ul>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-brand">
+        <div class="logo">
+          <i class="fas fa-bolt"></i>
+          <a href="../index.html">TNT Computers</a>
+        </div>
+      </div>
+      <ul class="nav-links" id="nav-links">
         <li><a href="../index.html">Home</a></li>
         <li><a href="../index.html#services" class="active">Services</a></li>
-        <li><a href="../service-areas.html">Service Areas</a></li>
+        <li><a href="../index.html#about">About</a></li>
         <li><a href="../index.html#reviews">Reviews</a></li>
         <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="../service-areas.html">Service Areas</a></li>
       </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
-  </div>
-</header>
+  </header>
 
-<section class="hero small-hero">
-  <div class="container">
-    <h1>IT Consulting</h1>
-    <p>Strategic IT guidance to keep your business ahead of the curve.</p>
-  </div>
-</section>
-
-<section class="content-section">
-  <div class="container">
-    <h2>Expert IT Consulting for Businesses</h2>
-    <p>
-      TNT Computers provides <strong>trusted IT consulting services</strong> designed to align
-      your technology with your business goals. Whether you’re planning growth, looking
-      to reduce costs, or upgrading outdated systems, our consultants help you make
-      informed decisions.
-    </p>
-
-    <h3>What We Offer</h3>
-    <ul>
-      <li>Technology assessments and strategic planning</li>
-      <li>Cloud adoption and digital transformation strategies</li>
-      <li>Cybersecurity planning and compliance guidance</li>
-      <li>Vendor and software selection consulting</li>
-      <li>IT budgeting and cost optimization</li>
-    </ul>
-
-    <h3>Why Choose TNT Computers?</h3>
-    <p>
-      We combine <strong>technical expertise</strong> with a deep understanding of business needs.
-      Our consulting services are tailored for businesses in <strong>Smithtown, Suffolk County,
-      and across Long Island</strong>, ensuring technology solutions that deliver real value.
-    </p>
-
-    <div class="cta-box">
-      <p>Looking for a strategic IT partner to guide your business?</p>
-      <a href="../index.html#contact" class="btn">Schedule a Consultation</a>
+  <!-- Service Hero -->
+  <section class="service-hero">
+    <div class="hero-background">
+      <div class="hero-overlay"></div>
     </div>
-  </div>
-</section>
+    <div class="container">
+      <div class="service-hero-content">
+        <div class="service-icon">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+        <h1>IT Consulting Services</h1>
+        <p>Strategic IT guidance to keep your business ahead of the technology curve</p>
+        <div class="hero-features">
+          <div class="feature">
+            <i class="fas fa-chart-line"></i>
+            <span>Strategic Planning</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-lightbulb"></i>
+            <span>Expert Guidance</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-handshake"></i>
+            <span>Trusted Partner</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  <div class="container">
-    <p>&copy; 2025 TNT Computers. All rights reserved.</p>
-  </div>
-</footer>
+  <!-- Main Content -->
+  <section class="service-content">
+    <div class="container">
+      <div class="content-grid">
+        <div class="main-content">
+          <div class="content-card">
+            <h2>Expert IT Consulting for Businesses</h2>
+            <p>TNT Computers provides <strong>trusted IT consulting services</strong> designed to align your technology with your business goals. Whether you're planning growth, looking to reduce costs, or upgrading outdated systems, our consultants help you make informed decisions.</p>
+            
+            <div class="service-image">
+              <svg width="100%" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- IT Consulting Illustration -->
+                <defs>
+                  <linearGradient id="consultingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#004aad;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#007bff;stop-opacity:1" />
+                  </linearGradient>
+                </defs>
+                
+                <!-- Conference room setup -->
+                <rect x="50" y="120" width="300" height="60" fill="#8b4513" rx="8"/>
+                
+                <!-- Charts and graphs -->
+                <rect x="80" y="60" width="80" height="50" fill="url(#consultingGrad)" rx="4"/>
+                <rect x="90" y="70" width="15" height="30" fill="#fff" opacity="0.8"/>
+                <rect x="110" y="80" width="15" height="20" fill="#fff" opacity="0.8"/>
+                <rect x="130" y="75" width="15" height="25" fill="#fff" opacity="0.8"/>
+                
+                <!-- Laptop -->
+                <rect x="200" y="80" width="120" height="60" fill="#333" rx="6"/>
+                <rect x="210" y="90" width="100" height="50" fill="url(#consultingGrad)" rx="3"/>
+                
+                <!-- Strategy elements -->
+                <circle cx="100" cy="40" r="20" fill="#28a745" opacity="0.2"/>
+                <text x="100" y="47" text-anchor="middle" fill="#28a745" font-size="16" font-weight="bold">📊</text>
+                
+                <circle cx="300" cy="40" r="20" fill="#ff6600" opacity="0.2"/>
+                <text x="300" y="47" text-anchor="middle" fill="#ff6600" font-size="16" font-weight="bold">⚡</text>
+                
+                <!-- Connection lines -->
+                <line x1="120" y1="40" x2="180" y2="40" stroke="#666" stroke-width="2" stroke-dasharray="5,5"/>
+                <line x1="220" y1="40" x2="280" y2="40" stroke="#666" stroke-width="2" stroke-dasharray="5,5"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <h3><i class="fas fa-cog"></i> What We Offer</h3>
+            <div class="service-list">
+              <div class="service-item">
+                <i class="fas fa-search"></i>
+                <div>
+                  <h4>Technology Assessments</h4>
+                  <p>Comprehensive evaluation of your current IT infrastructure and strategic planning for the future</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <i class="fas fa-cloud"></i>
+                <div>
+                  <h4>Cloud Adoption Strategy</h4>
+                  <p>Digital transformation strategies and cloud migration planning to modernize your operations</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <i class="fas fa-shield-alt"></i>
+                <div>
+                  <h4>Cybersecurity Planning</h4>
+                  <p>Security assessments, compliance guidance, and comprehensive cybersecurity strategies</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <i class="fas fa-handshake"></i>
+                <div>
+                  <h4>Vendor Selection</h4>
+                  <p>Expert guidance in choosing the right software, hardware, and service providers for your business needs</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <i class="fas fa-dollar-sign"></i>
+                <div>
+                  <h4>IT Budgeting & Cost Optimization</h4>
+                  <p>Strategic budgeting assistance and cost optimization to maximize your technology ROI</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <h3><i class="fas fa-star"></i> Why Choose TNT Computers?</h3>
+            <p>We combine <strong>technical expertise</strong> with a deep understanding of business needs. Our consulting services are tailored for businesses in <strong>Smithtown, Suffolk County, and across Long Island</strong>, ensuring technology solutions that deliver real value.</p>
+            
+            <div class="benefits-grid">
+              <div class="benefit">
+                <i class="fas fa-brain"></i>
+                <h4>Deep Expertise</h4>
+                <p>Years of hands-on IT experience</p>
+              </div>
+              <div class="benefit">
+                <i class="fas fa-business-time"></i>
+                <h4>Business Focus</h4>
+                <p>Technology aligned with goals</p>
+              </div>
+              <div class="benefit">
+                <i class="fas fa-map-marker-alt"></i>
+                <h4>Local Knowledge</h4>
+                <p>Understanding of local market</p>
+              </div>
+              <div class="benefit">
+                <i class="fas fa-chart-line"></i>
+                <h4>Proven Results</h4>
+                <p>Track record of successful projects</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <h3><i class="fas fa-rocket"></i> Our Consulting Process</h3>
+            <div class="process-steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4>Discovery & Assessment</h4>
+                  <p>We analyze your current technology infrastructure and business requirements</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4>Strategic Planning</h4>
+                  <p>Develop a comprehensive IT strategy aligned with your business objectives</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4>Implementation Support</h4>
+                  <p>Guide you through the implementation of recommended solutions</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <h4>Ongoing Partnership</h4>
+                  <p>Provide continued support and strategic guidance as your business grows</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <div class="cta-card">
+            <div class="cta-icon">
+              <i class="fas fa-calendar-alt"></i>
+            </div>
+            <h3>Ready to Get Started?</h3>
+            <p>Schedule a free consultation to discuss your IT strategy</p>
+            <a href="../index.html#contact" class="btn btn-primary">
+              <i class="fas fa-calendar-check"></i>
+              Schedule Consultation
+            </a>
+          </div>
+
+          <div class="info-card">
+            <h4><i class="fas fa-users"></i> Who We Help</h4>
+            <ul>
+              <li>Small to medium businesses</li>
+              <li>Professional service firms</li>
+              <li>Healthcare practices</li>
+              <li>Retail and hospitality</li>
+              <li>Non-profit organizations</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4><i class="fas fa-award"></i> Our Expertise</h4>
+            <ul>
+              <li>Microsoft 365 & Azure</li>
+              <li>Network Infrastructure</li>
+              <li>Cybersecurity Solutions</li>
+              <li>Cloud Computing</li>
+              <li>Business Continuity</li>
+            </ul>
+          </div>
+
+          <div class="related-services">
+            <h4>Related Services</h4>
+            <a href="managed-services.html" class="service-link">
+              <i class="fas fa-cogs"></i>
+              Managed IT Services
+            </a>
+            <a href="microsoft-cloud.html" class="service-link">
+              <i class="fab fa-microsoft"></i>
+              Microsoft Cloud
+            </a>
+            <a href="network-solutions.html" class="service-link">
+              <i class="fas fa-network-wired"></i>
+              Network Solutions
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <div class="cta-text">
+          <h2>Looking for a Strategic IT Partner?</h2>
+          <p>Let TNT Computers guide your business through the complexities of modern technology. Contact us today for expert IT consulting services.</p>
+        </div>
+        <div class="cta-buttons">
+          <a href="../index.html#contact" class="btn btn-primary">
+            <i class="fas fa-envelope"></i>
+            Schedule a Consultation
+          </a>
+          <a href="tel:+16316785773" class="btn btn-secondary">
+            <i class="fas fa-phone"></i>
+            Call Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <i class="fas fa-bolt"></i>
+            TNT Computers
+          </div>
+          <p>Your trusted IT partner serving Suffolk County and Long Island since 2014.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/TNTComputersLI" target="_blank">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#services">Services</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#reviews">Reviews</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="computer-repair.html">Computer Repair</a></li>
+            <li><a href="it-consulting.html">IT Consulting</a></li>
+            <li><a href="managed-services.html">Managed IT Services</a></li>
+            <li><a href="microsoft-cloud.html">Microsoft 365</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <ul>
+            <li><i class="fas fa-phone"></i> (631) 678-5773</li>
+            <li><i class="fas fa-envelope"></i> info@tntcomputers.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> Nesonset, NY 11767</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 TNT Computers. All rights reserved.</p>
+        <p>Serving Smithtown, Suffolk County & Long Island, NY with pride.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+
+    // Smooth Scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+          navLinks.classList.remove('active');
+          hamburger.classList.remove('active');
+        }
+      });
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.style.background = 'rgba(0, 74, 173, 0.95)';
+        navbar.style.backdropFilter = 'blur(10px)';
+      } else {
+        navbar.style.background = '#004aad';
+        navbar.style.backdropFilter = 'none';
+      }
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.content-card, .cta-card, .info-card, .step').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
+
+  <style>
+    /* Service-specific styles */
+    .service-hero {
+      background: linear-gradient(135deg, #004aad 0%, #0056b3 50%, #007bff 100%);
+      color: #fff;
+      padding: 6rem 0 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .service-icon {
+      width: 100px;
+      height: 100px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 2rem;
+      border: 3px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .service-icon i {
+      font-size: 3rem;
+      color: #ff6600;
+    }
+
+    .service-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .service-hero p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+
+    .hero-features {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    .feature i {
+      color: #ff6600;
+      font-size: 1.2rem;
+    }
+
+    .service-content {
+      padding: 4rem 0;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .content-card {
+      background: #fff;
+      padding: 2.5rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+      border: 1px solid #f0f0f0;
+    }
+
+    .content-card h2, .content-card h3 {
+      color: #004aad;
+      margin-bottom: 1.5rem;
+    }
+
+    .content-card h3 i {
+      color: #ff6600;
+      margin-right: 0.5rem;
+    }
+
+    .service-image {
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .service-list {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .service-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .service-item:hover {
+      background: #e9ecef;
+      transform: translateX(5px);
+    }
+
+    .service-item i {
+      color: #ff6600;
+      font-size: 1.5rem;
+      margin-top: 0.2rem;
+      min-width: 24px;
+    }
+
+    .service-item h4 {
+      color: #004aad;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .service-item p {
+      color: #666;
+      margin: 0;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .benefit {
+      text-align: center;
+      padding: 1.5rem;
+      background: #f8f9fa;
+      border-radius: 10px;
+    }
+
+    .benefit i {
+      color: #ff6600;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .benefit h4 {
+      color: #004aad;
+      margin-bottom: 0.5rem;
+    }
+
+    .process-steps {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.5rem;
+      background: #f8f9fa;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .step:hover {
+      background: #e9ecef;
+      transform: translateX(5px);
+    }
+
+    .step-number {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #ff6600, #e55a00);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .step-content h4 {
+      color: #004aad;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .step-content p {
+      color: #666;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .cta-card {
+      background: linear-gradient(135deg, #004aad, #007bff);
+      color: #fff;
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .cta-icon {
+      width: 60px;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+    }
+
+    .cta-icon i {
+      font-size: 1.5rem;
+      color: #ff6600;
+    }
+
+    .info-card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.5rem;
+    }
+
+    .info-card h4 {
+      color: #004aad;
+      margin-bottom: 1rem;
+    }
+
+    .info-card h4 i {
+      color: #ff6600;
+      margin-right: 0.5rem;
+    }
+
+    .info-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .info-card ul li {
+      padding: 0.5rem 0;
+      color: #666;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .info-card ul li:last-child {
+      border-bottom: none;
+    }
+
+    .related-services h4 {
+      color: #004aad;
+      margin-bottom: 1rem;
+      padding: 0 1.5rem;
+    }
+
+    .service-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 1.5rem;
+      color: #666;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .service-link:hover {
+      color: #004aad;
+      background: #f8f9fa;
+    }
+
+    .service-link i {
+      color: #ff6600;
+      font-size: 1.1rem;
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      padding: 4rem 0;
+    }
+
+    .cta-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .cta-text h2 {
+      color: #004aad;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .service-hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero-features {
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .feature {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.3rem;
+      }
+
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+  </style>
 </body>
 </html>
